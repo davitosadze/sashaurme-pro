@@ -1,0 +1,132 @@
+@import "_fonts.scss";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: FiragoReg;
+}
+
+.addOrder {
+  width: 100%;
+}
+.addProducts {
+  background: #f8faff;
+  padding: 2vw 1vw;
+  #quantity {
+    text-align: center;
+    width: 5vw;
+  }
+}
+
+.row {
+  margin: 2vw 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#addItem,
+#addOrder {
+  width: 80%;
+  margin: auto;
+  margin-top: 5vw;
+}
+.selector {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(10, 1fr);
+  &.clothesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: stretch;
+    a {
+      background: #fff;
+      border: 3px solid #eaeaea;
+      color: #000;
+      padding: 5px 1vw;
+      &.active {
+        background: #e6ebff;
+        border: 3px solid#031B92;
+        color: #031b92;
+      }
+    }
+  }
+  a {
+    font-size: 18px;
+    font-family: FiragoReg;
+    display: inline-block;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    min-width: 30px;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid rgba(255, 128, 128, 0.4);
+    color: rgba(255, 23, 103, 0.4);
+    background: rgba(255, 240, 240, 0.4);
+    border-radius: 10px;
+    height: 35px;
+    min-width: 35px;
+    line-height: 35px;
+    &.active {
+      opacity: 1;
+      color: #ff1767;
+      background: #fff0f0;
+      border-color: #ff8080;
+    }
+  }
+  select {
+    display: none;
+  }
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+.container {
+  width: 90vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span {
+  &.styled {
+    width: fit-content;
+    padding: 6px 12px;
+    background-color: #031b92;
+    border-radius: 6px;
+    color: #ffffff;
+  }
+  &.bold {
+    font-family: FiragoBold;
+  }
+}
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8vw;
+
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid rgba(17, 96, 251, 0.18);
+  font-family: FiragoMed;
+  font-size: 1vw;
+  caret-color: #031b92;
+  &:focus {
+    border: 2px solid #031b92;
+  }
+}
+input[type="submit"],
+input[type="button"] {
+  background-color: #031b92;
+  color: #ffffff;
+  font-family: FiragoBold;
+  &:hover {
+    cursor: pointer;
+    background: rgba(3, 27, 146, 0.7);
+  }
+}
+
+@import "_login.scss";
+@import "_dashboard.scss";
